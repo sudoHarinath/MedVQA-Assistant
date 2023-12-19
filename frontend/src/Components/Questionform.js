@@ -125,13 +125,12 @@ const QuestionForm = () => {
         question: question,
         data: imageData,
       };
-      const response = await axios.post('https://52af-2409-40f0-32-7089-f980-ac1-2893-d092.ngrok-free.app/predict', formData, {
+      const response = await axios.post('http://localhost:8000/predict', formData, {
       // const response = await axios.post('http://127.0.0.1:4040/predict', formData, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
-
       setAnswer(response.data.prediction);
     } catch (error) {
       console.error('Error submitting the form:', error);
