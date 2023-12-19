@@ -125,7 +125,7 @@ const QuestionForm = () => {
         question: question,
         data: imageData,
       };
-      const response = await axios.post('http://localhost:8000/predict', formData, {
+      const response = await axios.post(`http://${REACT_APP_Flask}/predict`, formData, {
       // const response = await axios.post('http://127.0.0.1:4040/predict', formData, {
         headers: {
           'Content-Type': 'application/json',
