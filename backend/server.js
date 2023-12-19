@@ -6,7 +6,7 @@ const env = require('dotenv');
 const router = require('./routes/authRoutes')
 env.config({ path: './.env' });
 app.use(cors({
-    origin:"https://6581a2ea3edba81423c77bee--sunny-trifle-a1f75c.netlify.app",
+    origin:`${process.env.frontend_link}`,
     credentials:true
 }));
 
