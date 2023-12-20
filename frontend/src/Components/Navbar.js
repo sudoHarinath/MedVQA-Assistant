@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -18,11 +18,13 @@ const Navbar = () => {
       console.log(err);
     }
   }
-
   // Redirect to /myapp if isLoggedIn is true
-  if (isLoggedIn) {
-    Navigate("/myapp");
-  }
+  useEffect(() => {
+    // Redirect to /myapp if isLoggedIn is true
+    if (isLoggedIn) {
+      Navigate("/myapp");
+    }
+  }, [isLoggedIn, Navigate]);
 
   return (
     <nav className="navbar navbar-expand-md bg-dark">

@@ -19,6 +19,7 @@ export const StyledLabel = styled.label`
 `;
 
 export const StyledInput = styled.input`
+  width: 100%; /* Set width to 100% for full horizontal expansion */
   padding: 8px;
   margin-bottom: 16px;
   border: 1px solid #051565;
