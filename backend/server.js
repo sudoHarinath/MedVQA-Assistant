@@ -6,7 +6,7 @@ const env = require('dotenv');
 const router = require('./routes/authRoutes')
 env.config({ path: './.env' });
 app.use(cors({
-    origin:`${process.env.frontend_link}`,
+    origin:[process.env.frontend_link, 'http://localhost:3000'],
     credentials:true
 }));
 
